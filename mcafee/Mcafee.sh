@@ -1,3 +1,4 @@
+# McAfee AV PLUGIN
 #!/bin/bash
 
 if ! command -v jq &> /dev/null; then
@@ -66,3 +67,23 @@ fi
 echo "Scan completed."
 echo "JSON Payload:"
 echo "$json_payload" | jq '.'
+
+
+#example json payload:
+
+# Saket Singh@LAPTOP-QBCATC1O MINGW64 /d/project/SIH2k24/AV-docker-engine/mcafee (master)
+# $ ./Mcafee.sh "D:/Test/testing.exe"
+
+# Input file: D:/Test/testing.exe
+# Converted path for Docker: D:/Test/testing.exe
+# Running McAfee AV scan...
+# Scan completed.
+# JSON Payload:
+# {
+#   "mcafee": {
+#     "infected": "true",
+#     "virus_type": "EICAR test file",
+#     "file_name": "testing.exe"
+#   },
+#   "scan_end_time": "2024-11-20 05:18:17"
+# }
