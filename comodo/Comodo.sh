@@ -1,3 +1,5 @@
+#COMODO ANTIVIRUS PLUGIN
+
 #!/bin/bash
 
 if ! command -v jq &> /dev/null; then
@@ -69,3 +71,23 @@ fi
 echo "Scan completed."
 echo "JSON Payload:"
 echo "$json_payload" | jq '.'
+
+
+
+#EXAMPLE OUTPUT: 
+
+# Saket Singh@LAPTOP-QBCATC1O MINGW64 /d/project/SIH2k24/AV-docker-engine/comodo (master)
+# $ ./Comodo.sh "D:/Test/testing.exe"
+# Input path: D:/Test/testing.exe
+# Converted path for Docker: D:/Test/testing.exe
+# Running Comodo AV scan...
+# Scan completed.
+# JSON Payload:
+# {
+#   "comodo": {
+#     "infected": "true",
+#     "virus_type": "ApplicUnwnt",
+#     "file_name": "testing.exe"
+#   },
+#   "scan_end_time": "2024-11-20 05:11:24"
+}
