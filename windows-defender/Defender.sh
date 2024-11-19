@@ -1,4 +1,4 @@
-
+# Windows Defender AV PLUGIN
 if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed. Please install it first."
     exit 1
@@ -68,3 +68,21 @@ echo "Scan completed."
 echo "JSON Payload:"
 echo "$json_payload" | jq '.'
 
+#Example 
+
+# Saket Singh@LAPTOP-QBCATC1O MINGW64 /d/project/SIH2k24/AV-docker-engine/windows-defender (master)
+# $ ./Defender.sh "D:/Test/testing.exe"
+
+# Input path: D:/Test/testing.exe
+# Converted path for Docker: D:/Test/testing.exe
+# Running Windows Defender scan...
+# Scan completed.
+# JSON Payload:
+# {
+#   "windows_defender": {
+#     "infected": "true",
+#     "virus_type": "Virus:DOS/EICAR_Test_File",
+#     "file_name": "testing.exe"
+#   },
+#   "scan_end_time": "2024-11-20 05:20:37"
+# }
