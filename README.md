@@ -1,4 +1,4 @@
-# Parallel Script Runner
+# Mutli AV Pipeline
 
 Welcome to the **Parallel Script Runner** repository! This project automates the simultaneous execution of three scripts: `malstr_check.sh`, `kappa.sh`, and `sigcheck.sh`, with the results logged into separate files. Follow the steps below to set up and run this repository.
 
